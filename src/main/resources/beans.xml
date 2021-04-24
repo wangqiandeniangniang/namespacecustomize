@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:custns="http://www.codelooru.com/custns"
+       xmlns:hello="http://www.baidu.com/hello"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.codelooru.com/custns http://www.codelooru.com/custns.xsd
+http://www.baidu.com/hello http://www.baidu.com/hello.xsd">
+
+    <custns:createservice serviceId="myservice-123" daoId="mydao-123" fields="field1,field2,field3"/>
+
+    <hello:createProxy id="proxy" classPath="com.spring.learn.springmvc.namespacecustomize.Hello"/>
+
+    <!--  The above element is equivalent to -->
+    <!--
+    <bean id="myservice-123" class="com.codelooru.dos.MyService">
+        <property name="defaultDao" ref="mydao-123" />
+        <property name="serviceName" value="myservice" />
+        <property name="daoRegistry">
+            <map>
+                <entry key="dao1" value-ref="mydao-123" />
+            </map>
+        </property>
+    </bean>
+
+    <bean id="mydao-123" class="com.codelooru.dos.MyDAO">
+        <property name="fields">
+            <list>
+                <value>field1</value>
+                <value>field2</value>
+                <value>field3</value>
+            </list>
+        </property>
+    </bean>
+
+    -->
+
+
+</beans>

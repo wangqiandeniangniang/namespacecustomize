@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.baidu.com/hello" xmlns:tns="http://www.baidu.com/hello">
+    <xs:element name="createProxy">
+        <xs:complexType>
+            <xs:attribute name="id" use="required" type="xs:string"/>
+            <xs:attribute name="classPath" use="required" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
